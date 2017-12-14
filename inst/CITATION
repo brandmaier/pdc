@@ -1,0 +1,19 @@
+bibentry(bibtype = "Article",
+  title        = "{pdc}: An {R} Package for Complexity-Based Clustering of Time Series",
+  author       = person(given = c("Andreas", "M."),
+                        family = "Brandmaier"),
+  journal      = "Journal of Statistical Software",
+  year         = "2015",
+  volume       = "67",
+  number       = "5",
+  pages        = "1--23",
+  doi          = "10.18637/jss.v067.i05",
+
+  header       = "To cite pdc in publications use:",
+  textVersion  =
+  paste("Andreas M. Brandmaier (2015).",
+        "pdc: An R Package for Complexity-Based Clustering of Time Series.",
+        "Journal of Statistical Software, 67(5), 1-23.",
+        "doi:10.18637/jss.v067.i05")
+)
+

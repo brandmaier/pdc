@@ -1,0 +1,56 @@
+#
+# general exports
+#
+export("pdclust")
+export("symmetricAlphaDivergence")
+export("symmetric.alpha.divergence")
+export("hellingerDistance")
+export("hellinger.distance")
+export("squaredHellingerDistance")
+export("squared.hellinger.distance")
+export("pdcDist")
+export("pdc.dist")
+export("entropyHeuristic")
+export("entropy.heuristic")
+export("codebook")
+export("loo1nn")
+export("mdsPlot")
+export("mds.plot")
+export("rasterPlot")
+
+#
+# export S3 generics
+#
+S3method("print", "mine")
+S3method("plot", "mine")
+S3method("plot","pdclust")
+S3method("print","pdclust")
+S3method("str","pdclust")
+S3method("print","summary.mine")
+S3method("summary","mine")
+
+#
+# trace & convert with legacy calls
+#
+export("traceImage")
+export("trace.image")
+export("convertImage")
+export("convert.image")
+
+#
+# load shared object
+#
+useDynLib(pdc)
+
+#
+# imports from default (but not base) packages
+# required as of Mid 2015
+#
+
+importFrom("grDevices", "chull", "heat.colors")
+importFrom("graphics", "abline", "contour", "image", "lines", "par",
+             "plot", "points", "polygon", "rasterImage", "strheight",
+             "strwidth", "text")
+importFrom("stats", "as.dendrogram", "as.dist", "cmdscale", "hclust",
+             "pchisq")
+importFrom("utils", "str")
