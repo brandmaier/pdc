@@ -17,7 +17,6 @@ SEXP fast_codebook4(SEXP sexp_x, SEXP sexp_t) {
     // release data structure
     
     // prepare result
-    int m = 4;
     int d_length = 24;
     SEXP retValue;
     PROTECT(retValue = NEW_INTEGER(d_length));

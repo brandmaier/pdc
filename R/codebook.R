@@ -1,7 +1,7 @@
 codebook <-
 function(x,m=3,t=1, use.fast=T, normalized=T)
 {
-	if (class(x) != "numeric") {
+	if (!is.numeric(x)) {
 		stop("X must be of class numeric!")
 	}
 
