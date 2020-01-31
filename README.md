@@ -5,9 +5,8 @@ pdc
 version](http://www.r-pkg.org/badges/version/pdc)](https://cran.r-project.org/package=pdc)
 [![rstudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/pdc)](https://github.com/metacran/cranlogs.app)
-<!-- badges: start --> [![Lifecycle:
+[![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
-<!-- badges: end -->
 
 What is this?
 -------------
@@ -25,5 +24,5 @@ References
 ----------
 
 Brandmaier, A. M. (2015). pdc: An R package for complexity-based
-clustering of time series. Journal of Statistical Software, 67.
+clustering of time series. *Journal of Statistical Software*, 67.
 <a href="doi:10.18637/jss.v067.i05" class="uri">doi:10.18637/jss.v067.i05</a>
