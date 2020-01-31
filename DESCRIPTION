@@ -7,5 +7,13 @@ Author: Andreas M. Brandmaier
 Maintainer: Andreas M. Brandmaier <brandmaier@mpib-berlin.mpg.de>
 Description: Permutation Distribution Clustering is a clustering method for time series. Dissimilarity of time series is formalized as the divergence between their permutation distributions. The permutation distribution was proposed as measure of the complexity of a time series.
 License: GPL-3
-Imports: stats, utils, grDevices, graphics
-Suggests: plotrix, lattice
+Imports: stats, 
+  utils, 
+  grDevices, 
+  graphics
+Suggests: 
+    plotrix,
+    lattice,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
