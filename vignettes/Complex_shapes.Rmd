@@ -1,0 +1,62 @@
+---
+title: "Complex_shapes"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Load the package, the example dataset for clustering complex shapes and we define a vector of correct labels.
+
+```{r setup}
+library(pdc)
+data("complex.shapes", package = "pdc")
+truth <- rep(c("fish", "bottle", "glasses"), c(5, 4, 5))
+```
+
+We set a larger minimum time-delay of 5 to increase robustness over discretization errors when searching for the optimal delay.
+
+```{r}
+ent <- entropyHeuristic(complex.shapes, t.min = 5, t.max = 10)
+summary(ent)
+```
+
+This is a plot of the entropy heuristic over time-delays and embedding dimensions.
+
+```{r}
+plot(ent)
+```
+
+Now, we apply the clustering algorithm.
+
+```{r}
+clust <- pdclust(complex.shapes, m = ent$m, t = ent$t)
+
+```
+
+Using the function `rasterPlot`, we get a dendrogram of the clustering solution with the images as leafs.
+
+```{r}
+data("complex.shapes.raw", package = "pdc")
+rasterPlot(clust, complex.shapes.raw$images)
+```
+
+And, finally, this is the multi-dimensional scaling projection onto two dimensions:
+
+```{r}
+mdsPlot(clust, labels=truth, col=c("blue","green","red"))
+```
+
+Now, what if we use some sub-optimal clustering:
+
+```{r}
+clust <- pdclust(complex.shapes, 3, t = 1)
+rasterPlot(clust, complex.shapes.raw$images)
+```
+
+```{r}
+mdsPlot(clust, labels=truth, col=c("blue","green","red"))
+```

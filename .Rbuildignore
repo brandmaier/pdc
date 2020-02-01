@@ -3,3 +3,4 @@
 ^docs$
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
+^vignettes/Complex_shapes\.Rmd$
