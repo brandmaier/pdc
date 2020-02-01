@@ -11,14 +11,36 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 What is this?
 -------------
 
+“Permutation distribution clustering is a complexity-based approach to
+clustering time series. The dissimilarity of time series is formalized
+as the squared Hellinger distance between the permutation distribution
+of embedded time series. The resulting distance measure has linear time
+complexity, is invariant to phase and monotonic transformations, and
+robust to outliers.” (Brandmaier et al., 2015)
+
+PDC was cited in the context of modeling the predictability of
+infectious disease outbreaks, clustering of river stream flows,
+volatility of financial markets, in a decision support systems for
+agriculture and farming.
+
 Install
 -------
 
-To install the latest pdc package directly from GitHub, copy the
-following line into R:
+To install the packagr from CRAN, simply type
+
+    install.packages("pdc")
+
+To install the latest pdc package directly from this repository, copy
+the following line into R:
 
     library(devtools)
-    devtools::install_github("pdc","brandmaier")
+    devtools::install_github("brandmaier/pdc")
+
+Documentation
+-------------
+
+Please see the online package documentation here:
+<https://brandmaier.github.io/pdc/>.
 
 References
 ----------

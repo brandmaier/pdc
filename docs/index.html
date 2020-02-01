@@ -78,13 +78,22 @@
 <div id="what-is-this" class="section level2">
 <h2 class="hasAnchor">
 <a href="#what-is-this" class="anchor"></a>What is this?</h2>
+<p>“Permutation distribution clustering is a complexity-based approach to clustering time series. The dissimilarity of time series is formalized as the squared Hellinger distance between the permutation distribution of embedded time series. The resulting distance measure has linear time complexity, is invariant to phase and monotonic transformations, and robust to outliers.” (Brandmaier et al., 2015)</p>
+<p>PDC was cited in the context of modeling the predictability of infectious disease outbreaks, clustering of river stream flows, volatility of financial markets, in a decision support systems for agriculture and farming.</p>
 </div>
 <div id="install" class="section level2">
 <h2 class="hasAnchor">
 <a href="#install" class="anchor"></a>Install</h2>
-<p>To install the latest pdc package directly from GitHub, copy the following line into R:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(devtools)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"pdc"</span>,<span class="st">"brandmaier"</span>)</span></code></pre></div>
+<p>To install the packagr from CRAN, simply type</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"pdc"</span>)</span></code></pre></div>
+<p>To install the latest pdc package directly from this repository, copy the following line into R:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(devtools)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"brandmaier/pdc"</span>)</span></code></pre></div>
+</div>
+<div id="documentation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#documentation" class="anchor"></a>Documentation</h2>
+<p>Please see the online package documentation here: <a href="https://brandmaier.github.io/pdc/" class="uri">https://brandmaier.github.io/pdc/</a>.</p>
 </div>
 <div id="references" class="section level2">
 <h2 class="hasAnchor">
