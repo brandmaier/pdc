@@ -2,8 +2,12 @@ Package: pdc
 Type: Package
 Title: Permutation Distribution Clustering
 Version: 1.0.4
-Date: 2015-09-28
-Author: Andreas M. Brandmaier
+Date: 2020-02-02
+Author: Andreas M. Brandmaier [aut, cre]
+Authors@R: c(person("Andreas M. Brandmaier", 
+      email="andy@brandmaier.de", 
+      role=c("aut","cre"),
+      comment = c(ORCID = "0000-0001-8765-6982")))
 Maintainer: Andreas M. Brandmaier <brandmaier@mpib-berlin.mpg.de>
 Description: Permutation Distribution Clustering is a clustering method for time series. Dissimilarity of time series is formalized as the divergence between their permutation distributions. The permutation distribution was proposed as measure of the complexity of a time series.
 License: GPL-3
