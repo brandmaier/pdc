@@ -4,3 +4,4 @@
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
 ^vignettes/Complex_shapes\.Rmd$
+^vignettes/Runtime_comparison\.Rmd$

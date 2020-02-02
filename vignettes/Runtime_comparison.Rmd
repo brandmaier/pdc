@@ -1,0 +1,34 @@
+---
+title: "Runtime comparison"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(pdc)
+library(tictoc)
+```
+
+The computation of codebooks in `pdc` up to embedding dimension 7 is implemented in C code for faster execution. Here is a comparison of the gain in speed by switching from the R implementation using `sort` to the C implementation based on nested `ìf` blocks. First, the fast computation in C:
+
+```{r}
+N <- 50000
+x <- rnorm(N)
+tic()
+codebook <- pdc::codebook(x, m=7, use.fast = TRUE)
+toc()
+```
+
+Then, the naive implementation in R:
+
+```{r}
+tic()
+codebook <- pdc::codebook(x, m=7, use.fast = FALSE)
+toc()
+```
+

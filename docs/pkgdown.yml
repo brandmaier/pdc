@@ -4,4 +4,5 @@ pkgdown_sha: ~
 articles:
   Complex_shapes: Complex_shapes.html
   Getting_started: Getting_started.html
+  Runtime_comparison: Runtime_comparison.html
 
