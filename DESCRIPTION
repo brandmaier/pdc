@@ -21,3 +21,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: http://brandmaier.github.io/pdc, https://github.com/brandmaier/pdc

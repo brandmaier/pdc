@@ -1,3 +1,9 @@
+# pdc 1.1.0; ongoing
+
+* added udclust() and udcDist() functionality
+* added pkgdown
+* added travis support
+
 # pdc 1.0.3; 28.09.2015
 
 * updated citation file and citation in docs
