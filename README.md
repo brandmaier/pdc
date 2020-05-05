@@ -7,8 +7,8 @@ version](http://www.r-pkg.org/badges/version/pdc)](https://cran.r-project.org/pa
 downloads](http://cranlogs.r-pkg.org/badges/pdc)](https://github.com/metacran/cranlogs.app)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
-<!-- badges: start --> [![Travis build
-status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
+<!-- badges: start --> 
+[![Travis build status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
 <!-- badges: end -->
 
 What is this?
