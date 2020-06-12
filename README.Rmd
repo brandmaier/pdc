@@ -25,7 +25,7 @@ and robust to outliers." (Brandmaier et al., 2015)
 
 PDC was cited in the context of modeling the predictability of infectious disease outbreaks, 
 clustering of river stream flows, volatility of financial markets, in a decision support systems 
-for agriculture and farming.
+for agriculture and farming, in investigating Antarctic cryoconite holes.
 
 ## Install
 

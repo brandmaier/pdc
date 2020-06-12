@@ -1,8 +1,9 @@
 pandoc: 2.9.1.1
-pkgdown: 1.4.1
+pkgdown: 1.5.1
 pkgdown_sha: ~
 articles:
   Complex_shapes: Complex_shapes.html
   Getting_started: Getting_started.html
   Runtime_comparison: Runtime_comparison.html
+last_built: 2020-05-07T18:47Z
 

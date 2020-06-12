@@ -7,8 +7,8 @@ version](http://www.r-pkg.org/badges/version/pdc)](https://cran.r-project.org/pa
 downloads](http://cranlogs.r-pkg.org/badges/pdc)](https://github.com/metacran/cranlogs.app)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
-<!-- badges: start --> 
-[![Travis build status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
+<!-- badges: start --> [![Travis build
+status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
 <!-- badges: end -->
 
 What is this?
@@ -24,7 +24,7 @@ robust to outliers.” (Brandmaier et al., 2015)
 PDC was cited in the context of modeling the predictability of
 infectious disease outbreaks, clustering of river stream flows,
 volatility of financial markets, in a decision support systems for
-agriculture and farming.
+agriculture and farming, in investigating Antarctic cryoconite holes.
 
 Install
 -------

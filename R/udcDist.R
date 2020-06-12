@@ -1,10 +1,17 @@
-udConvert <- function(x) {function(x) { ifelse(sign(diff(x))==1,1,0)  }}
+udConvert <- function(x)  { ifelse(sign(diff(x))==1,1,0)  }
 
-udcDist <- function(X, compression.type="xz") {
+udComplexity <- function(x, compression.type="zip") {
+  return(length(memCompress(paste0(udConvert(x),collapse = "")), 
+                type=compression.type)/length(x))
+}
+
+udcDist <- function(X, compression.type="zip") {
 
   if (length(dim(X)) == 2) { 
 
-    XX <- apply(X,2, udConvert()) 
+    baseline.correction <- length(memCompress("0",type=compression.type))-1
+    
+    XX <- apply(X,2, udConvert )
     
     l <- dim(XX)[2]
     mt <- matrix(rep(0,l*l),l,)
@@ -22,9 +29,9 @@ udcDist <- function(X, compression.type="xz") {
         
         comp<-memCompress(from=
                       paste0(XX[,i],XX[,j],collapse=""),type=compression.type)
-        zx <- comp.lengths[i]
-        zy <- comp.lengths[j]
-        zxy <- length(comp)
+        zx <- comp.lengths[i]-baseline.correction
+        zy <- comp.lengths[j]-baseline.correction
+        zxy <- length(comp)-baseline.correction
         mt[i,j]<-mt[j,i]<- 
            (zxy-min(zx,zy))/max(zx,zy)  
         
