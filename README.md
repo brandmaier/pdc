@@ -15,7 +15,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 size](https://img.shields.io/github/languages/code-size/brandmaier/pdc.svg)
 [![Travis build
 status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
-!(<a href="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" class="uri">https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat</a>)\](<a href="https://github.com/IndrajeetPatil/ggstatsplot/issues" class="uri">https://github.com/IndrajeetPatil/ggstatsplot/issues</a>)
+![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 
 <!-- badges: end -->
 

@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 ![Code size](https://img.shields.io/github/languages/code-size/brandmaier/pdc.svg)
 [![Travis build status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
-!(https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/ggstatsplot/issues)
+![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 
 
 <!-- badges: end -->
