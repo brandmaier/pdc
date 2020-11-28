@@ -1,5 +1,5 @@
 codebook <-
-function(x,m=3,t=1, use.fast=T, normalized=T)
+function(x,m=3,t=1, use.fast=TRUE, normalized=TRUE, codeword_func = NULL)
 {
 	if (!is.numeric(x)) {
 		stop("X must be of class numeric!")
@@ -8,6 +8,14 @@ function(x,m=3,t=1, use.fast=T, normalized=T)
 	if (t*(m-1) >= length(x)) {
 		return(NA);
 	}
+  
+  if (!is.null(codeword_func) & use.fast) {
+    use.fast <- FALSE
+  }
+  
+  if (is.null(codeword_func)) {
+    codeword_func <- codeword
+  }
 	
 	# branch to fast C implementation, if possible
 	
@@ -28,12 +36,12 @@ function(x,m=3,t=1, use.fast=T, normalized=T)
 	 } 
 
 	if (!use.fast | m>7) {
-	 
 
-	# generic codeword function
-	codeword.func <- codeword;
-
-	distribution <- rep.int(0, factorial(m))
+	if (identical(codeword,codeword_func)) {
+	  distribution <- rep.int(0, factorial(m))
+	} else {
+	  distribution <- rep.int(0, 2^m)
+	}
 	to <- (length(x)-t*(m-1))
 	for(i in 1:to)
 	{
@@ -44,7 +52,7 @@ function(x,m=3,t=1, use.fast=T, normalized=T)
 		if	(any(is.na(data))) { next; }
 		
 		# calculate permutation index
-		number <- codeword.func(data, m);
+		number <- codeword_func(data, m);
 				
 		distribution[number] <- distribution[number] + 1
 	}
