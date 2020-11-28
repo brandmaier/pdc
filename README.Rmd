@@ -48,6 +48,10 @@ library(devtools)
 devtools::install_github("brandmaier/pdc")
 ```
 
+## Examples
+
+![Getting Started](https://brandmaier.github.io/pdc/articles/Getting_started.html)
+
 ## Documentation
 
 Please see the online package documentation here: [https://brandmaier.github.io/pdc/](https://brandmaier.github.io/pdc/).

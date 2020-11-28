@@ -48,6 +48,12 @@ the following line into R:
     library(devtools)
     devtools::install_github("brandmaier/pdc")
 
+Examples
+--------
+
+![Getting
+Started](https://brandmaier.github.io/pdc/articles/Getting_started.html)
+
 Documentation
 -------------
 
