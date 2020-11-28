@@ -7,12 +7,15 @@ pdc
 version](http://www.r-pkg.org/badges/version/pdc)](https://cran.r-project.org/package=pdc)
 [![rstudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/pdc)](https://github.com/metacran/cranlogs.app)
+[![Total downloads
+badge](https://cranlogs.r-pkg.org/badges/grand-total/pdc?color=blue)](https://CRAN.R-project.org/pdc)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 ![Code
 size](https://img.shields.io/github/languages/code-size/brandmaier/pdc.svg)
 [![Travis build
 status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
+!(<a href="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" class="uri">https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat</a>)\](<a href="https://github.com/IndrajeetPatil/ggstatsplot/issues" class="uri">https://github.com/IndrajeetPatil/ggstatsplot/issues</a>)
 
 <!-- badges: end -->
 
