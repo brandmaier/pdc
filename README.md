@@ -1,14 +1,19 @@
 pdc
 ===
 
+<!-- badges: start -->
+
 [![cran
 version](http://www.r-pkg.org/badges/version/pdc)](https://cran.r-project.org/package=pdc)
 [![rstudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/pdc)](https://github.com/metacran/cranlogs.app)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
-<!-- badges: start --> [![Travis build
+![Code
+size](https://img.shields.io/github/languages/code-size/brandmaier/pdc.svg)
+[![Travis build
 status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
+
 <!-- badges: end -->
 
 What is this?
