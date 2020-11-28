@@ -51,12 +51,12 @@ the following line into R:
 Examples
 --------
 
--   ![Getting
-    Started](https://brandmaier.github.io/pdc/articles/Getting_started.html "fig:")
--   ![Clustering complex
-    !shapes](https://brandmaier.github.io/pdc/articles/Complex_shapes.html "fig:")
--   ![Runtime
-    comparison](https://brandmaier.github.io/pdc/articles/Runtime_comparison.html "fig:")
+-   [Getting
+    Started](https://brandmaier.github.io/pdc/articles/Getting_started.html)
+-   [Clustering complex
+    !shapes](https://brandmaier.github.io/pdc/articles/Complex_shapes.html)
+-   [Runtime
+    comparison](https://brandmaier.github.io/pdc/articles/Runtime_comparison.html)
 
 Documentation
 -------------
