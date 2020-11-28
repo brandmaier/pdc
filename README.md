@@ -16,6 +16,7 @@ size](https://img.shields.io/github/languages/code-size/brandmaier/pdc.svg)
 [![Travis build
 status](https://travis-ci.com/brandmaier/pdc.svg?branch=master)](https://travis-ci.com/brandmaier/pdc)
 ![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
+[![Features](https://img.shields.io/badge/features-pdc-orange.svg?colorB=2196F3)](https://brandmaier.github.io/pdc/reference/index.html)
 
 <!-- badges: end -->
 
