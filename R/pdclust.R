@@ -1,25 +1,23 @@
 pdclust <-
 function(X, m=NULL, t=NULL, divergence=symmetricAlphaDivergence, clustering.method="complete") 
 {
-	user.m <- !is.null(m);
-	user.t <- !is.null(t);
+	user.m <- !is.null(m)
+	user.t <- !is.null(t)
 	
 	if ((is.null(m)) && (is.null(t))) {
-			m <- entropyHeuristic(X)$m;
+			m <- entropyHeuristic(X)$m
 	}
 	
 	if (is.null(m)) {
-			m <- entropyHeuristic(X, t.min=t, t.max=t)$m;
+			m <- entropyHeuristic(X, t.min=t, t.max=t)$m
 	}
 	
 	if (is.null(t)) {
-			t <- 1;
+			t <- 1
 	}
-	
-
 
 	# calculate divergence matrix			
-	D <- pdcDist(X,m,t,divergence);
+	D <- pdcDist(X,m,t,divergence)
 	
 	# start hierarchical clustering
 	if (clustering.method == "complete") {

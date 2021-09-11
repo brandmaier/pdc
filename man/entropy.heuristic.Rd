@@ -16,7 +16,7 @@ Heuristic (MinE) automatically chooses an embedding dimension with an optimal
 representational entropy as proxy for representational power.
 }
 \usage{
-entropyHeuristic(X, m.min=3, m.max=7, t.min = 1, t.max = 1)
+entropyHeuristic(X, m.min=3, m.max=7, t.min = 1, t.max = 1, normalize_by_observed = FALSE)
 
 \method{print}{mine}(x, \dots)
 \method{summary}{mine}(object, \dots)
@@ -32,6 +32,8 @@ entropyHeuristic(X, m.min=3, m.max=7, t.min = 1, t.max = 1)
 \item{m.max}{Maximum embedding dimension}
 \item{t.min}{Minimum time-delay}
 \item{t.max}{Maximum time-delay}
+\item{normalize_by_observed}{Boolean. If false, entropy is normalized by dividing by the logarithm of the number of all possible patterns. If true,
+it is divided by the logarithm of the number of observed patterns.}
 \item{\dots}{Further arguments for the generic print, summary, and plot method.}
 
 \item{normalize}{Normalize values to range [0;1].}

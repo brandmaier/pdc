@@ -40,7 +40,7 @@ export("convert.image")
 #
 # load shared object
 #
-useDynLib(pdc)
+useDynLib(pdc,  .registration = TRUE)
 
 #
 # imports from default (but not base) packages
@@ -53,4 +53,5 @@ importFrom("graphics", "abline", "contour", "image", "lines", "par",
              "strwidth", "text")
 importFrom("stats", "as.dendrogram", "as.dist", "cmdscale", "hclust",
              "pchisq")
+importFrom("stats", "qnorm")
 importFrom("utils", "str")

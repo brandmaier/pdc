@@ -6,7 +6,7 @@ function(X, m.min=3, m.max=7, t.min=1, t.max=1)
 }
 
 entropyHeuristic <-
-function(X, m.min=3, m.max=7, t.min=1, t.max=1)
+function(X, m.min=3, m.max=7, t.min=1, t.max=1, normalize_by_observed=FALSE)
 {
 	X <- as.matrix(X)
 
@@ -22,7 +22,7 @@ function(X, m.min=3, m.max=7, t.min=1, t.max=1)
 	 {
 	 	ent[k,1] <- j
 	 	ent[k,2] <- i
-		ent[k,3] <- mean(apply(FUN=codebook.entropy, MARGIN=2, X, m=i,t=j))
+		ent[k,3] <- mean(apply(FUN=codebook.entropy, MARGIN=2, X, m=i,t=j, normalize_by_observed=normalize_by_observed))
 		k <- k+1
 	 }
 	best <- which.min(ent[,3]);

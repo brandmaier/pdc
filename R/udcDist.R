@@ -3,8 +3,9 @@ udConvert <- function(x)  { ifelse(sign(diff(x))==1,1,0)  }
 udCodeword <- function(x, m) {sum( 2^(1:(m-1)-1) * udConvert(x) )+1}
 
 udComplexity <- function(x, compression.type="zip") {
-  return(length(memCompress(paste0(udConvert(x),collapse = "")), 
-                type=compression.type)/length(x))
+  return(length(
+    memCompress(paste0(udConvert(x),collapse = ""),type=compression.type) 
+              )/length(x))
 }
 
 udcDist <- function(X, compression.type="zip") {

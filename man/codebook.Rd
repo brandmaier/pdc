@@ -7,7 +7,7 @@ Codebook
 A codebook contains the permutation distribution of a time series.
 }
 \usage{
-codebook(x, m = 3, t = 1, use.fast=TRUE, normalized = TRUE, codeword_func = codeword)
+codebook(x, m = 3, t = 1, use.fast=TRUE, normalized = TRUE, codeword_func = NULL)
 }
 \arguments{
   \item{x}{
@@ -22,7 +22,7 @@ The embedding dimension.
 
 \item{normalized}{Normalize codebook such that it is a probability distribution.}
 
-\item{codeword_func}{Function to compute codewords.}
+\item{codeword_func}{Function to compute codewords. If NULL, the default internal function codebook is used.}
 }
 \details{
 The length of a codebook is the factorial of the embedding dimension. The elements of the
