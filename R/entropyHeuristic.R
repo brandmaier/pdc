@@ -6,7 +6,7 @@ function(X, m.min=3, m.max=7, t.min=1, t.max=1)
 }
 
 entropyHeuristic <-
-function(X, m.min=3, m.max=7, t.min=1, t.max=1, normalize_by_observed=FALSE)
+function(X, m.min=3, m.max=7, t.min=1, t.max=1, normalize_by_observed=TRUE)
 {
 	X <- as.matrix(X)
 

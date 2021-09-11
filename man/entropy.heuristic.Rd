@@ -16,7 +16,7 @@ Heuristic (MinE) automatically chooses an embedding dimension with an optimal
 representational entropy as proxy for representational power.
 }
 \usage{
-entropyHeuristic(X, m.min=3, m.max=7, t.min = 1, t.max = 1, normalize_by_observed = FALSE)
+entropyHeuristic(X, m.min=3, m.max=7, t.min = 1, t.max = 1, normalize_by_observed = TRUE)
 
 \method{print}{mine}(x, \dots)
 \method{summary}{mine}(object, \dots)
