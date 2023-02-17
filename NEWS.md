@@ -3,6 +3,7 @@
 * added udclust() and udcDist() functionality
 * added pkgdown
 * added travis support
+* added two new vignettes on multivariate time series and the paired time series dataset
 
 # pdc 1.0.3; 28.09.2015
 
