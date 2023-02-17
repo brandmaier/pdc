@@ -4,7 +4,7 @@ mds.plot <- function(X, labels=NULL, col="gray")
 	return(mdsPlot(X, labels, col));
 }
 
-mdsPlot <- function(X, labels=NULL, col="gray") {
+mdsPlot <- function(X, labels=NULL, col="gray", ...) {
 	
 	if (is.null(labels)) {
 		labels <- colnames(X$data)
@@ -14,7 +14,7 @@ mdsPlot <- function(X, labels=NULL, col="gray") {
 	x <- mds$points[,1] 
 	y <- mds$points[,2]
 	plot(x,y, xlab="Coordinate #1", ylab="Coordinate #2", type="n",
-		 main="Multidimensional Scaling")
+		 main="Multidimensional Scaling", ...)
 	
 	# determine convex hulls of clusters
 	for (cn in unique(labels)) {

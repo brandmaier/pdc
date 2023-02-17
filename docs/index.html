@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,23 +33,17 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">pdc</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.4</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -60,6 +56,12 @@
       <a href="articles/Getting_started.html">Getting started</a>
     </li>
     <li>
+      <a href="articles/Multivariate.html">Multivariate Time Series</a>
+    </li>
+    <li>
+      <a href="articles/Paired_tseries.html">Paired Time Series</a>
+    </li>
+    <li>
       <a href="articles/Runtime_comparison.html">Runtime comparison</a>
     </li>
   </ul>
@@ -70,8 +72,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/brandmaier/pdc/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/brandmaier/pdc/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -87,33 +89,46 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="pdc" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#pdc" class="anchor"></a>pdc</h1></div>
-<p><a href="https://cran.r-project.org/package=pdc"><img src="http://www.r-pkg.org/badges/version/pdc" alt="cran version"></a> <a href="https://github.com/metacran/cranlogs.app"><img src="http://cranlogs.r-pkg.org/badges/pdc" alt="rstudio mirror downloads"></a> <a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a> <!-- badges: start --> <a href="https://travis-ci.com/brandmaier/pdc"><img src="https://travis-ci.com/brandmaier/pdc.svg?branch=master" alt="Travis build status"></a> <!-- badges: end --></p>
-<div id="what-is-this" class="section level2">
-<h2 class="hasAnchor">
-<a href="#what-is-this" class="anchor"></a>What is this?</h2>
+<div class="section level1">
+<div class="page-header"><h1 id="pdc">pdc<a class="anchor" aria-label="anchor" href="#pdc"></a>
+</h1></div>
+<!-- badges: start -->
+
+<!-- badges: end -->
+<div class="section level2">
+<h2 id="what-is-this">What is this?<a class="anchor" aria-label="anchor" href="#what-is-this"></a>
+</h2>
 <p>“Permutation distribution clustering is a complexity-based approach to clustering time series. The dissimilarity of time series is formalized as the squared Hellinger distance between the permutation distribution of embedded time series. The resulting distance measure has linear time complexity, is invariant to phase and monotonic transformations, and robust to outliers.” (Brandmaier et al., 2015)</p>
-<p>PDC was cited in the context of modeling the predictability of infectious disease outbreaks, clustering of river stream flows, volatility of financial markets, in a decision support systems for agriculture and farming.</p>
+<p>PDC was cited in the context of modeling the predictability of infectious disease outbreaks, clustering of river stream flows, volatility of financial markets, in a decision support systems for agriculture and farming, in investigating Antarctic cryoconite holes.</p>
 </div>
-<div id="install" class="section level2">
-<h2 class="hasAnchor">
-<a href="#install" class="anchor"></a>Install</h2>
+<div class="section level2">
+<h2 id="install">Install<a class="anchor" aria-label="anchor" href="#install"></a>
+</h2>
 <p>To install the packagr from CRAN, simply type</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">"pdc"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pdc"</span>)</span></code></pre></div>
 <p>To install the latest pdc package directly from this repository, copy the following line into R:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(devtools)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"brandmaier/pdc"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"brandmaier/pdc"</span>)</span></code></pre></div>
 </div>
-<div id="documentation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#documentation" class="anchor"></a>Documentation</h2>
-<p>Please see the online package documentation here: <a href="https://brandmaier.github.io/pdc/" class="uri">https://brandmaier.github.io/pdc/</a>.</p>
+<div class="section level2">
+<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h2>
+<ul>
+<li><a href="https://brandmaier.github.io/pdc/articles/Getting_started.html" class="external-link">Getting Started</a></li>
+<li><a href="https://brandmaier.github.io/pdc/articles/Complex_shapes.html" class="external-link">Clustering complex shapes</a></li>
+<li><a href="https://brandmaier.github.io/pdc/articles/Runtime_comparison.html" class="external-link">Runtime comparison</a></li>
+<li><a href="https://brandmaier.github.io/pdc/articles/Paired_tseries.html" class="external-link">Paired Time series</a></li>
+<li><a href="https://brandmaier.github.io/pdc/articles/Multivariate.html" class="external-link">Multivariate</a></li>
+</ul>
 </div>
-<div id="references" class="section level2">
-<h2 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h2>
+<div class="section level2">
+<h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
+</h2>
+<p>Please see the online package documentation here: <a href="https://brandmaier.github.io/pdc/" class="external-link uri">https://brandmaier.github.io/pdc/</a>.</p>
+</div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
 <p>Brandmaier, A. M. (2015). pdc: An R package for complexity-based clustering of time series. <em>Journal of Statistical Software</em>, 67. <a href="doi:10.18637/jss.v067.i05" class="uri">doi:10.18637/jss.v067.i05</a></p>
 </div>
 </div>
@@ -121,37 +136,52 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=pdc">https://​cloud.r-project.org/​package=pdc</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/brandmaier/pdc/">https://​github.com/​brandmaier/​pdc/​</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=pdc" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/brandmaier/pdc/" class="external-link">Browse source code</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></small></li>
+<li><small><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></small></li>
 </ul>
 </div>
+
 <div class="community">
-<h2>Community</h2>
+<h2 data-toc-skip>Community</h2>
 <ul class="list-unstyled">
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
+
 <div class="citation">
-<h2>Citation</h2>
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html">Citing pdc</a></li>
+<li><a href="authors.html#citation">Citing pdc</a></li>
 </ul>
 </div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Andreas M. Brandmaier <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-8765-6982" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Andreas M. Brandmaier <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-8765-6982" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://cran.r-project.org/package=pdc" class="external-link"><img src="http://www.r-pkg.org/badges/version/pdc" alt="cran version"></a></li>
+<li><a href="https://github.com/metacran/cranlogs.app" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/pdc" alt="rstudio mirror downloads"></a></li>
+<li><a href="https://CRAN.R-project.org/pdc" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/pdc?color=blue" alt="Total downloads badge"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+<li><a href="https://travis-ci.com/brandmaier/pdc" class="external-link"><img src="https://travis-ci.com/brandmaier/pdc.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://brandmaier.github.io/pdc/reference/index.html" class="external-link"><img src="https://img.shields.io/badge/features-pdc-orange.svg?colorB=2196F3" alt="Features"></a></li>
+<li><a href="https://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></li>
 </ul>
 </div>
 
@@ -160,11 +190,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Andreas M. Brandmaier.</p>
+  <p></p>
+<p>Developed by Andreas M. Brandmaier.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -172,6 +204,8 @@
 
   
 
+
+  
 
   </body>
 </html>

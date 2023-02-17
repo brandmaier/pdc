@@ -1,0 +1,48 @@
+---
+title: "Paired Time Series"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a demonstration of how to use the `pdc` package to cluster time series
+with a data set of 18 pairs of time series. The pairs should be similar to
+each other but dissimilar to members of other pairs. 
+
+First, we load the paired time series data set provided by the `TSclust` package.
+
+```{r paired, echo=TRUE, warning=FALSE,message=FALSE}
+library("TSclust")
+data("paired.tseries", package = "TSclust")
+```
+
+Plot two examples from the data set:
+```{r}
+plot(paired.tseries[,12], main=names(colnames(paired.tseries))[12], ylab="")
+plot(paired.tseries[,2], main=names(colnames(paired.tseries))[2], ylab="")
+```
+
+Run the heuristic to determine the embedding dimension and plot the result:
+
+```{r mine}
+mine <- entropyHeuristic(paired.tseries,t.max = 10)
+plot(mine)
+
+```
+
+Run the clustering algorithm with the heuristic embedding dimension and give
+pairs of time series the same color:
+
+```{r}
+clust <- pdclust(paired.tseries, m = mine$m, t = mine$t)
+
+truth <- rep(1:18, each=2)
+plot(clust, cols=truth)
+```

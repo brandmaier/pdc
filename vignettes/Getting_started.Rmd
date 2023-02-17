@@ -1,6 +1,6 @@
 ---
 title: "Getting started"
-author: "Andreas Brandmaier"
+author: "Andreas M. Brandmaier"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >

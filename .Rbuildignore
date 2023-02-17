@@ -9,3 +9,7 @@
 ^Makefile$
 ^CONTRIBUTORS\.md$
 ^README.Rmd$
+^.*\.Rproj$
+^\.Rproj\.user$
+^doc$
+^Meta$

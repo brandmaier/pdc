@@ -1,0 +1,49 @@
+---
+title: "Multivariate Time Series"
+author: "Andreas M. Brandmaier"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a minimal working example that demonstrates how multivariate time series
+can be clustered with the `pdc` package. Note that `pdc` can only capture limited
+information in multivariate time series and there are likely other approaches
+that are better suited to deal with multivariate time series.
+
+First, we load the package and simulate four two-dimensional timeseries, each
+with 5000 observations. The first pair are simulated from an autoregressive process
+with AR=0.1, the second pair are simulated with AR=0.4.
+
+```{r generate}
+library(pdc)
+
+set.seed(902101)
+
+ar_params <- rep(c(0.1,0.4), each=3)
+
+X <- array(data = NA, dim=c(5000,6,2))
+for (i in 1:dim(X)[2]) {
+  for (j in 1:dim(X)[3]) {
+    X[,i,j] <- arima.sim(list(ar=ar_params[i]),n=5000)
+  }
+}
+
+labels <- paste("2D-ARIMA ",ar_params,sep="")
+
+
+```
+
+Run clustering and plot result
+
+```{r,fig.height=5}
+result <- pdclust(X, clustering.method = "single")
+plot(result,timeseries.as.labels = FALSE, labels = labels)
+```

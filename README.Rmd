@@ -52,9 +52,10 @@ devtools::install_github("brandmaier/pdc")
 ## Examples
 
 - [Getting Started](https://brandmaier.github.io/pdc/articles/Getting_started.html)
-- [Clustering complex
-!shapes](https://brandmaier.github.io/pdc/articles/Complex_shapes.html)
+- [Clustering complex shapes](https://brandmaier.github.io/pdc/articles/Complex_shapes.html)
 - [Runtime comparison](https://brandmaier.github.io/pdc/articles/Runtime_comparison.html)
+- [Paired Time series](https://brandmaier.github.io/pdc/articles/Paired_tseries.html)
+- [Multivariate](https://brandmaier.github.io/pdc/articles/Multivariate.html)
 
 ## Documentation
 

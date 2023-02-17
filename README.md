@@ -1,5 +1,4 @@
-pdc
-===
+# pdc
 
 <!-- badges: start -->
 
@@ -22,8 +21,7 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 
 <!-- badges: end -->
 
-What is this?
--------------
+## What is this?
 
 “Permutation distribution clustering is a complexity-based approach to
 clustering time series. The dissimilarity of time series is formalized
@@ -37,8 +35,7 @@ infectious disease outbreaks, clustering of river stream flows,
 volatility of financial markets, in a decision support systems for
 agriculture and farming, in investigating Antarctic cryoconite holes.
 
-Install
--------
+## Install
 
 To install the packagr from CRAN, simply type
 
@@ -50,25 +47,25 @@ the following line into R:
     library(devtools)
     devtools::install_github("brandmaier/pdc")
 
-Examples
---------
+## Examples
 
 -   [Getting
     Started](https://brandmaier.github.io/pdc/articles/Getting_started.html)
 -   [Clustering complex
-    !shapes](https://brandmaier.github.io/pdc/articles/Complex_shapes.html)
+    shapes](https://brandmaier.github.io/pdc/articles/Complex_shapes.html)
 -   [Runtime
     comparison](https://brandmaier.github.io/pdc/articles/Runtime_comparison.html)
+-   [Paired Time
+    series](https://brandmaier.github.io/pdc/articles/Paired_tseries.html)
+-   [Multivariate](https://brandmaier.github.io/pdc/articles/Multivariate.html)
 
-Documentation
--------------
+## Documentation
 
 Please see the online package documentation here:
 <https://brandmaier.github.io/pdc/>.
 
-References
-----------
+## References
 
 Brandmaier, A. M. (2015). pdc: An R package for complexity-based
 clustering of time series. *Journal of Statistical Software*, 67.
-<a href="doi:10.18637/jss.v067.i05" class="uri">doi:10.18637/jss.v067.i05</a>
+<doi:10.18637/jss.v067.i05>
