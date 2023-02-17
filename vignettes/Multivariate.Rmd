@@ -18,9 +18,15 @@ can be clustered with the `pdc` package. Note that `pdc` can only capture limite
 information in multivariate time series and there are likely other approaches
 that are better suited to deal with multivariate time series.
 
-First, we load the package and simulate four two-dimensional timeseries, each
+First, we load the package and simulate six two-dimensional time series, each
 with 5000 observations. The first pair are simulated from an autoregressive process
 with AR=0.1, the second pair are simulated with AR=0.4.
+
+Note that to this end, data must be arranged in a three-dimensional array, with
+the first dimension representing time, the second dimension identity of the
+time series, and the third dimension the dimension of the time series. Here, we
+create data according to `dim=c(5000,6,2)` that is 6 unique time series with each
+two channels and 5,000 observed time points.
 
 ```{r generate}
 library(pdc)
@@ -32,7 +38,7 @@ ar_params <- rep(c(0.1,0.4), each=3)
 X <- array(data = NA, dim=c(5000,6,2))
 for (i in 1:dim(X)[2]) {
   for (j in 1:dim(X)[3]) {
-    X[,i,j] <- arima.sim(list(ar=ar_params[i]),n=5000)
+    X[,i,j] <- arima.sim(list(ar=ar_params[i]),n=dim(X)[1])
   }
 }
 
